@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signup</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.css')}}">
+
+	<!-- jQuery library -->
+	<script src="{{url_for('static',filename='jquery.js')}}"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="{{url_for('static',filename='bootstrap.js')}}"></script>
+</head>
+<body>
+<!--nav-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+        <li><a href="{{url_for('login')}}">login</a></li>
+        <li><a href="{{url_for('signup')}}">signup</a></li>
+      </ul>
+      <ul>
+</ul></div></div></nav>
+<!--nav-->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<form action="" method="POST" class="form-group">
+{{form.hidden_tag()}}
+<label>username</label>
+{{form.username(class_="form-control")}}
+<label>emial</label>
+{{form.email(class_="form-control")}}
+<label>password</label>
+{{form.password(class_="form-control")}}
+<input type="submit" value="send"/>
+</form>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+</body>
+</html>>
